@@ -1,0 +1,23 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    &::after, &::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.grid-3 {
+    width: calc(25% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    background: gray;
+    color: white;
+    float: left;
+}
