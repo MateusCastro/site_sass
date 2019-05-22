@@ -1,28 +1,19 @@
-body {
-  padding: 0px;
-  margin: 0px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.container::after, .container::before {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.grid-3 {
-  width: calc(25% - 20px);
-  margin-left: 10px;
-  margin-right: 10px;
-  background: gray;
-  color: white;
-  float: left;
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
 p {
   color: blue;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  p {
+    color: pink;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  p {
+    color: aqua;
+  }
 }

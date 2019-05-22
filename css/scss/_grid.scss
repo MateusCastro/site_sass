@@ -1,23 +1,38 @@
-body {
-    padding: 0px;
-    margin: 0px;
+// variáveis do grid
+$cols: 12;
+$gutter: 20px;
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+// box-sizing
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    &::after, &::before {
-        content: '';
-        display: table;
-        clear: both;
+// Mixin de media-querie
+@mixin d($size){
+    @if $size == l {
+        @media screen and (min-width: $l-device){
+            @content;
+        }
+    }@else if $size == m {
+        @media screen and (min-width: $m-device) and (max-width: $l-device - 1) {
+            @content;
+        }
+    }@else if $size == s {
+        @media screen and (max-width: $m-device - 1) {
+            @content;
+        }
     }
 }
 
-.grid-3 {
-    width: calc(25% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    background: gray;
-    color: white;
-    float: left;
+p {
+    color: blue;
+    @include d(m){
+        color: pink;
+    }
+    @include d(s){
+        color: aqua;
+    }
 }
