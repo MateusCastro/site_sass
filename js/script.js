@@ -7,6 +7,5 @@
         }else{
             aberto[0].style.background = "red";
         }
-        console.log(hour);
     }, 1000)
 })();
