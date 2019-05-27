@@ -102,8 +102,6 @@ $s-device: 480px;
     }
     @include d(s) {
         max-width: $s-device;
-        margin-left: 10px;
-        margin-right: 10px;
     }
     @include clearfix;
 }
